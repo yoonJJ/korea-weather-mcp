@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tool-colling"
+version = "0.1.0"
+description = "기상청 단기예보 MCP(stdio/HTTP) + Anthropic tools 에이전트 루프 예제"
+requires-python = ">=3.10"
+dependencies = [
+  "mcp",
+  "python-dotenv",
+  "requests",
+]
+
+[project.scripts]
+weather-mcp-stdio = "weather_mcp.apps.stdio:main"
+weather-mcp-http = "weather_mcp.apps.http:main"
+weather-agent-loop = "weather_mcp.apps.agent_loop:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

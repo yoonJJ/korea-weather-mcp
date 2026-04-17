@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "weather-mcp": {
+      "command": "python",
+      "args": ["-m", "weather_mcp.apps.stdio"],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src",
+        "KMA_SERVICE_KEY": "공공데이터포털에서_발급한_키"
+      }
+    }
+  }
+}
